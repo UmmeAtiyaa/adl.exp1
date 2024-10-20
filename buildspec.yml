@@ -3,14 +3,13 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 14
+      nodejs: 14  # Assuming you're using Node.js for something, remove if not necessary
   build:
     commands:
-      - echo "Building the project"
-      - npm install
-      - npm run build
+      - echo "Building the project"  # This can be customized based on your build process
+      - npm install                  # Remove if you don't need Node.js packages
+      - npm run build                # Remove if you're not generating files through a build command
 
 artifacts:
   files:
-    - '**/*'
-  base-directory: build  # Specify the output directory where the built files are located
+    - '**/*'                       # This will include all files in the root directory
