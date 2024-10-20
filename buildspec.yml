@@ -2,14 +2,15 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      nodejs: 14  # Assuming you're using Node.js for something, remove if not necessary
+    # No installation steps are needed for pure HTML/CSS/JS
+    commands:
+      - echo "No dependencies to install"
   build:
     commands:
-      - echo "Building the project"  # This can be customized based on your build process
-      - npm install                  # Remove if you don't need Node.js packages
-      - npm run build                # Remove if you're not generating files through a build command
+      - echo "Building the project"
+      # No build commands are necessary for static HTML files
 
 artifacts:
   files:
-    - '**/*'                       # This will include all files in the root directory
+    - '**/*'          # This will include all HTML files and any other files in the repo
+  base-directory: .   # The output directory where the built files are located
